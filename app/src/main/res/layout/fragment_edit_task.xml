@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/edit_task_toolbar"
+        android:title="Edit Task"/>
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
+        tools:context="com.todolist.activities.AddItemActivity"
+        >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_edit_task_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Task Name"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_edit_task_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </TableRow>
+
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#000000"/>-->
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_edit_due_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Due Date"
+                android:textSize="15sp"/>
+
+            <DatePicker
+                android:id="@+id/dp_edit_due_date"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                />
+        </TableRow>
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#000000"/>-->
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_edit_task_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Task Notes"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_edit_task_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="text"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_edit_priority_level"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Priority Level"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/sp_edit_priority_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/priority_level"/>
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tv_edit_status"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/sp_edit_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/status"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
